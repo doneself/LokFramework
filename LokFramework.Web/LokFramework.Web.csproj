@@ -114,10 +114,12 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -131,13 +133,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LokFramework.Models\LokFramework.Models.csproj">
       <Project>{df2cc684-5852-4e25-80ea-08f0ce66df4a}</Project>
       <Name>LokFramework.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LokFramework.Service\LokFramework.Service.csproj">
+      <Project>{7011a56f-2a81-4019-ab5f-3d24cfe9fbf4}</Project>
+      <Name>LokFramework.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LokFramework.ToolSet\LokFramework.ToolSet.csproj">
+      <Project>{b656f2d1-14f2-4272-a991-b63667f7deb9}</Project>
+      <Name>LokFramework.ToolSet</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

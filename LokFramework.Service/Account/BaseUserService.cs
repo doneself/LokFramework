@@ -16,7 +16,7 @@ namespace LokFramework.Service.Account
         {
             using(var conn = new SqlConnection(connString))
             {
-                string sql = "INSERT INTO tablename (UserName, Password) VALUES (@UserName, @Password)";
+                string sql = "INSERT INTO BaseUser (UserName, Password) VALUES (@UserName, @Password)";
                 var affectedRows = conn.Execute(sql, new { UserName = username, Password = password });
                 Debug.Write($"affectedRow:{affectedRows}");
             }
