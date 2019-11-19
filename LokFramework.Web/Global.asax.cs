@@ -7,6 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
+using LokFramework.Web.App_Start;
 
 namespace LokFramework.Web
 {
@@ -15,7 +16,7 @@ namespace LokFramework.Web
         void Application_Start(object sender, EventArgs e)
         {
             // 在应用程序启动时运行的代码
-            Startup.Configuration();
+            DependencyConfig.Configuration();
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);            
